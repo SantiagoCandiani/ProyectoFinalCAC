@@ -19,7 +19,7 @@ public class ContactoServicio implements IContactoServicio {
     }
 
     @Override
-    public Contacto buscarContacto(Integer idContacto) {
+    public Contacto buscarContactoporID(Integer idContacto) {
         Contacto contacto = contactoRepositorio.findById(idContacto).orElse(null);
         return contacto;
     }
