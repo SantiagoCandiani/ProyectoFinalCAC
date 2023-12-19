@@ -39,7 +39,7 @@ public class ContactoControlador {
     public String agregar(@ModelAttribute("contactoForm") Contacto contacto) {
         logguer.info("Contacto a agregar:" + contacto);
         contactoServicio.guardarContacto(contacto);
-        return "redirect:/"; //redirijo al controlador el path "/"
+        return "redirect:/"; //redirijo al path de inicio "/"
     }
 
     @GetMapping("/editar/{id}")
@@ -54,7 +54,15 @@ public class ContactoControlador {
     public String editar(@ModelAttribute("contacto") Contacto contacto) {
         logguer.info("Contacto a guardar (editar):" + contacto);
         contactoServicio.guardarContacto(contacto);
-        return "redirect:/"; //redirijo al controlador el path "/"
+        return "redirect:/"; //redirijo al path de inicio "/"
+    }
+
+    @GetMapping("/eliminar/{id}")
+    public String eliminar(@PathVariable(value = "id") int idContacto) {
+        Contacto contacto = new Contacto();
+        contacto.setIdContacto(idContacto);
+        contactoServicio.eliminarContacto(contacto);
+        return "redirect:/"; //redirijo al path de inicio "/"
     }
 
 }//Class
