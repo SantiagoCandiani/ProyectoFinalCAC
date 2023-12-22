@@ -29,6 +29,9 @@ El Sistema de Contactos, también conocido como Agenda de Contactos, es una apli
 2. Navega al directorio del proyecto usando `cd GestorIncidentes`.
 3. Ejecuta la aplicación usando `./mvnw spring-boot:run`.
 
+
+**Nota**: Al ejecutar la aplicación, la base de datos y sus tablas se generarán automáticamente.
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue para discutir lo que te gustaría cambiar o envía un pull request.
